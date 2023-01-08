@@ -1,31 +1,26 @@
 #include<stdio.h>
-int main()
-{
-    float a,b,amt,tamt;
+int main(){
+    float a,amt,amt1;
     scanf("%f",&a);
-    if(a<=199)
-    {
-        b=a*1.20;
+    if(a<=199){
+        amt=a*1.20;
     }
-    else if(a>=200 && a<400)
-    {
-        b=a*1.50;
+    else if(200<=a&&a<400){
+        amt=a*1.50;
     }
-    else if(a>=400 && a<600)
-    {
-        b=a*1.80;
+    else if(400<=a&&a<600){
+        amt=a*1.80;
     }
-    else if(a>=600)
-    {
-        b=a*2.00;
+    else if(a>=600){
+        amt=a*2.00;
     }
-    if(b>400)
-    {
-        amt=b+(b*0.15);
+    if(amt>400){
+        amt1=amt+(amt*0.15);
+        printf("%.2f",amt1);
     }
-    else if(b<400)
-    {
-        amt=b+100;
+    else{
+        amt1=amt+100;
+        printf("%.2f",amt1);
     }
-    printf("%0.2f",amt);
+    
 }
