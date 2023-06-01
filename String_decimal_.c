@@ -2,24 +2,29 @@
 #include<string.h>
 int main()
 {
-    int n,i,j;
+    int n;
+    scanf("%d",&n);
+    int i,j,c=0,c1=0;
     char a[100];
-    scanf("%d
-",&n);
     for(i=1;i<=n;i++)
     {
         scanf("
-%[^
-]s",a);
-        int l=strlen(a),c=0;
-        for(j=0;j<l;j++)
+");
+        scanf("%s",a);
+        c=0;
+        c1=0;
+        for(j=0;j<strlen(a);j++)
         {
-            if(a[j]=='1' || a[j]=='2' || a[j]=='3' || a[j]=='4' || a[j]=='5'|| a[j]=='6'|| a[j]=='7'|| a[j]=='8'|| a[j]=='9'|| a[j]=='0')
+            if(a[j]>='0' && a[j]<='9')
             {
-                c++;
+                c+=1;
+            }
+            if(a[j]!=' ')
+            {
+                c1+=1;
             }
         }
-        if(c==l)
+        if(c1==c)
         {
             printf("True
 ");
