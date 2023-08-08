@@ -1,38 +1,31 @@
 #include<stdio.h>
+#include<ctype.h>
 #include<string.h>
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    int i,j,c=0,c1=0;
-    char a[100];
-    for(i=1;i<=n;i++)
+    int t;
+    scanf("%d",&t);
+    for(int j=0;j<t;j++)
     {
-        scanf("
+       char s[100];
+       scanf("%s",s);
+       int c=0,i,l=strlen(s);
+       for(i=0;i<l;i++)
+       {
+           if(isdigit(s[i]))
+           {
+               c++;
+           }
+       }
+       if(c==l)
+       {
+           printf("True
 ");
-        scanf("%s",a);
-        c=0;
-        c1=0;
-        for(j=0;j<strlen(a);j++)
-        {
-            if(a[j]>='0' && a[j]<='9')
-            {
-                c+=1;
-            }
-            if(a[j]!=' ')
-            {
-                c1+=1;
-            }
-        }
-        if(c1==c)
-        {
-            printf("True
+       }
+       else
+       {
+           printf("False
 ");
-        }
-        else
-        {
-            printf("False
-");
-        }
+       }
     }
 }
